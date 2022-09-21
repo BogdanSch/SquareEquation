@@ -9,6 +9,11 @@ $d = $b * $b - 4 * $a * $c;
 if($d < 0){
     echo "<div style=\"color: red;\"> D < 0 <strong>There are no solutions!</strong></div>";
 }
+elseif($a == 0){
+    $x = -$c / $b;
+
+    echo "<div style=\"color: blue;\"> This is just equation <strong>x = $x </strong></div>";
+}
 elseif($d == 0){
     $x = sqrt($d) / (2 * $a);
 
