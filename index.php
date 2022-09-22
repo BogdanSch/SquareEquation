@@ -1,6 +1,6 @@
 <?php
 
-$a = rand(-10, 10);
+$a = 0;//rand(-10, 10);
 $b = rand(-10, 10);
 $c = rand(-10, 10);
 
@@ -10,9 +10,13 @@ if($d < 0){
     echo "<div style=\"color: red;\"> D < 0 <strong>There are no solutions!</strong></div>";
 }
 elseif($a == 0){
-    $x = -$c / $b;
-
-    echo "<div style=\"color: blue;\"> This is just equation <strong>x = $x </strong></div>";
+    if($b == 0){
+        echo "<div style=\"color: red;\"> b = 0 <strong>There are no solutions!</strong></div>";
+    }
+    else{
+        $x = -$c / $b;
+        echo "<div style=\"color: blue;\"> This is just equation <strong>x = $x </strong></div>";
+    }
 }
 elseif($d == 0){
     $x = sqrt($d) / (2 * $a);
